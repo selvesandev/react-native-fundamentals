@@ -42,7 +42,69 @@ Install the Expo client app on your iOS or Android phone and connect to the same
 **[Getting Start](https://facebook.github.io/react-native/docs/getting-started.html)**
 
 
+## Install Redux
+```
+npm install --save react-redux redux
+```
+
+
+#### Setup Redux
+Setting up the `react-redux` in our Root Component `App.js`
+**Step 1 (import Provider and createStore)**
+```
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+```
+**Step 2 (return the Provider Component)**
+```
+    render() {
+            return (
+                <Provider store={createStore()}>
+                    <View>
+                        <Text>
+                            Welcome
+                        </Text>
+                    </View>
+                </Provider>
+            );
+        }
+```
+**Step 3 (create a Reducer)**
+Create `/src/store/reducers/index.js` to combine all the reducers
+```
+import {combineReducers} from 'redux';
+
+export default combineReducers({
+    banana: () => []//text reducer just to get the setup
+    //here you will list all your reducers
+})    
+```
+
+Import the combinedReducer to the Root Component `App.js` and pass it to the createStore Method
+```
+import reducers from './src/store/reducers';
+
+    render() {
+        return (
+            <Provider store={createStore(reducers)}>
+                <View>
+                    <Text>
+                        Welcome
+                    </Text>
+                </View>
+            </Provider>
+        );
+    }
+
+```
+
+
+
+
 # 
+
+
+
 
 
 ## Table of Contents
