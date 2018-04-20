@@ -11,8 +11,6 @@ export default class App extends React.Component {
         return (
             <Provider store={createStore(reducers)}>
                 <View style={styles.container}>
-                    {/*<Header headerText={'Home'}/>*/}
-                    {/*<AlbumList/>*/}
                     <RouterComponent/>
                 </View>
             </Provider>
