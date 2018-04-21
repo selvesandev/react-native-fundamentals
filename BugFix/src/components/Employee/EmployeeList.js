@@ -5,7 +5,7 @@ class EmployeeList extends Component {
     render() {
         return (
             <View>
-                <Text>Employee Component</Text>
+                <Text>Employee Component.</Text>
             </View>
         )
     }

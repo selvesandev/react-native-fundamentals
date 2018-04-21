@@ -16,7 +16,7 @@ export default class App extends Component {
         )
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (!firebase.apps.length) {
             const config = {
                 apiKey: "AIzaSyDdMkWmclITqusHmbwPwgxKLEyG3-AIRFA",
@@ -37,5 +37,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-    },
+    }
 });
