@@ -32,7 +32,7 @@ export const loginUser = ({email, password}) => {
 
 const loginUserSuccess = (dispatch, user) => {
     dispatch({type: ActionTypes.LOGIN_USER_SUCCESS, payload: user});
-    Actions.employeeList({type: 'reset'});
+    Actions.employeeList();
 };
 
 const loginUserFailed = (dispatch, user) => {

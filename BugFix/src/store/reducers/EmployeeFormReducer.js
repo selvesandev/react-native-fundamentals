@@ -14,11 +14,12 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 [action.payload.prop]: action.payload.value
             };
-
         case actionTypes.EMPLOYEE_CREATE:
+            return INITIAL_STATE;
+        case actionTypes.EMPLOYEE_FETCH_SUCCESS:
+        case actionTypes.EMPLOYEE_SAVE_SUCCESS:
             return {
                 ...state,
-
             };
         default:
             return {
